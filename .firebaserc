@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "pwiprojekt"
+  },
+  "hosting": {
+    "public": "dist/pwi-projekt",
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "/pwi-projekt/en/index.html",
+        "type": 302
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="background">
+    <div class="overlay"></div>
+    <img
+      src="assets/images/background1920w.jpg"
+      alt="nature background"
+      class="image"
+    />
+  </div>
+  <header class="header">
+    <a href="" class="text"> Webtweet<span class="color">.</span> </a>
+    <nav class="navigation" [attr.data-active]="isActive">
+      <button href="" class="close" (click)="onCloseButton()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <div class="content">
+        <h3 class="title">Navigation</h3>
+        <ul class="list">
+          <li class="item"><a href="" class="link">About us</a></li>
+          <li class="item"><a href="" class="link">Service</a></li>
+          <li class="item"><a href="" class="link">Footer</a></li>
+        </ul>
+        <p class="text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit
+          corrupti quas rerum tempore beatae ratione delectus dolore aperiam.
+        </p>
+        <div class="socialMedia">
+          <div class="item">
+            <a href="" class="link">
+              <mat-icon>facebook</mat-icon>
+            </a>
+          </div>
+          <div class="item">
+            <a href="" class="link">
+              <mat-icon>apple</mat-icon>
+            </a>
+          </div>
+          <div class="item">
+            <a href="" class="link">
+              <mat-icon>website</mat-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <button href="" class="hamburger" (click)="toggleNav()">
+      <span class="color"> Menu</span>
+
+      <mat-icon>menu</mat-icon>
+    </button>
+  </header>
+  <div class="main">
+    <h3 class="subtitle" i18n>Welcome to webtweet</h3>
+    <h1 class="title">
+      We are a creative group <br />
+      of people who design <br />
+      influentical brand
+    </h1>
+    <div class="action">
+      <button class="button">MORE ABOUT US</button>
+    </div>
+  </div>
+  <aside class="aside">
+    <ul class="socialMedia">
+      <li class="item">
+        <a href="" class="link">
+          <span class="circle">
+            <mat-icon>facebook</mat-icon>
+          </span>
+          <span class="name"> Facebook </span>
+        </a>
+      </li>
+      <li class="item">
+        <a href="" class="link">
+          <span class="circle">
+            <mat-icon>apple</mat-icon>
+          </span>
+          <span class="name">Apple</span>
+        </a>
+      </li>
+      <li class="item">
+        <a href="" class="link">
+          <span class="circle">
+            <mat-icon>website</mat-icon>
+          </span>
+          <span class="name">Website</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+</div>
