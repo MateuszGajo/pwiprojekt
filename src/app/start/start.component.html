@@ -14,11 +14,11 @@
         <mat-icon>close</mat-icon>
       </button>
       <div class="content">
-        <h3 class="title">Navigation</h3>
+        <h3 class="title" i18n>Navigation</h3>
         <ul class="list">
-          <li class="item"><a href="" class="link">About us</a></li>
-          <li class="item"><a href="" class="link">Service</a></li>
-          <li class="item"><a href="" class="link">Footer</a></li>
+          <li class="item"><a href="" class="link" i18n>About us</a></li>
+          <li class="item"><a href="" class="link" i18n>Service</a></li>
+          <li class="item"><a href="" class="link" i18n>Contact</a></li>
         </ul>
         <p class="text">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit
@@ -43,7 +43,12 @@
         </div>
       </div>
     </nav>
-    <button href="" class="hamburger" (click)="toggleNav()">
+    <button
+      href=""
+      class="hamburger"
+      (click)="toggleNav()"
+      [ngClass]="isFixed ? 'fixed' : ''"
+    >
       <span class="color"> Menu</span>
 
       <mat-icon>menu</mat-icon>
@@ -51,12 +56,12 @@
   </header>
   <div class="main">
     <h3 class="subtitle" i18n>Welcome to webtweet</h3>
-    <h1 class="title">
+    <h1 class="title" i18n>
       We are a creative group <br />
       of people who design <br />
       influentical brand
     </h1>
-    <div class="action">
+    <div class="action" i18n>
       <button class="button">MORE ABOUT US</button>
     </div>
   </div>

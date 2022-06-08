@@ -1,5 +1,5 @@
 .container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
   .background {
@@ -105,6 +105,9 @@
       }
     }
     .hamburger {
+      position: fixed;
+      top: 2em;
+      right: 20px;
       background: none;
       border: none;
       color: White;
@@ -113,6 +116,12 @@
       align-items: center;
       cursor: pointer;
       font-size: 1rem;
+      background-color: black;
+      padding: 0.5em 1em;
+      transition: background-color 0.5s;
+      &.fixed {
+        background-color: transparent;
+      }
       .mat-icon {
         font-size: 1.8rem;
       }

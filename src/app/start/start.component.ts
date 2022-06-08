@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-start',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
   isActive = false;
+  isFixed = true;
   constructor() {}
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    if (this.isFixed && window.scrollY > 0) this.isFixed = false;
+    else if (!this.isFixed && window.scrollY === 0) this.isFixed = true;
+    console.log(this.isFixed);
+  }
 
   ngOnInit(): void {}
 
