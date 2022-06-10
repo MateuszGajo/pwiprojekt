@@ -3,4 +3,8 @@
   <app-aboutus></app-aboutus>
   <app-service></app-service>
   <app-contact></app-contact>
+  <div class="cookie" [ngClass]="isHidden ? 'isHidden' : ''">
+    <p i18n>This website is using cookies</p>
+    <button class="button" i18n (click)="onClick()">Accept</button>
+  </div>
 </div>

@@ -195,6 +195,21 @@
         </context-group>
         <note priority="1" from="description">Email Addres i18n</note>
       </trans-unit>
+      <trans-unit id="2432000492746591252" datatype="html">
+        <source>This website is using cookies</source>
+        <target>Ta strona używa ciasteczek</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8905995985388209337" datatype="html">
+        <source>Rozumiem</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

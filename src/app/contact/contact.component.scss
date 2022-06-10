@@ -1,14 +1,21 @@
 .container {
-  padding: 6em 0 6em 0;
+  padding: 6em 1rem 6em;
   background-color: #111;
   display: flex;
   justify-content: center;
   gap: 5em;
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+  }
   .aboutus {
     max-width: 450px;
     width: 100%;
     .name {
       color: var(--primary-color);
+      @media (max-width: 640px) {
+        text-align: center;
+      }
       font-size: 2rem;
       font-weight: 600;
     }
@@ -16,6 +23,9 @@
       color: #757575;
       font-size: 1rem;
       line-height: 1.4rem;
+      @media (max-width: 640px) {
+        text-align: center;
+      }
     }
   }
   .newsletter {
@@ -25,8 +35,14 @@
       color: white;
       font-weight: 600;
       font-size: 1.3rem;
+      @media (max-width: 640px) {
+        text-align: center;
+      }
     }
     .description {
+      @media (max-width: 640px) {
+        text-align: center;
+      }
       color: #757575;
     }
     .field {
@@ -42,6 +58,10 @@
         min-width: none;
         color: #aaa;
         padding-left: 0.5rem;
+        width: 160px;
+        @media (max-width: 480px) {
+          width: 100px;
+        }
         &::placeholder {
           color: #888;
         }
@@ -59,6 +79,7 @@
         background-color: var(--primary-color);
         color: white;
         transition: background 0.3s;
+        border: none;
         cursor: pointer;
         &:hover {
           background-color: var(--primary-color--darker);

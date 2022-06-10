@@ -22,14 +22,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    top: 2em;
-    left: 2em;
-    right: 2em;
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
     .text {
       text-decoration: none;
       color: white;
       font-weight: bold;
-      font-size: 1.8rem;
+      font-size: clamp(1rem, 0.8rem + 2vw, 2rem);
+
       .color {
         color: var(--primary-color);
         font-size: 2.2rem;
@@ -43,7 +44,7 @@
       bottom: 0;
       right: 0;
       width: 200px;
-      padding: 25px 20px;
+      padding: 2em 20px;
       background-color: #0c0c0c;
       transition: transform 1s;
       transform: translateX(100%);
@@ -106,7 +107,8 @@
     }
     .hamburger {
       position: fixed;
-      top: 2em;
+      z-index: 26;
+      top: calc(2rem - 0.5em);
       right: 20px;
       background: none;
       border: none;
@@ -141,6 +143,7 @@
     max-width: 1200px;
     width: 100%;
     margin: 1rem auto 0;
+    padding-left: 1rem;
     .subtitle {
       color: var(--grey-200);
       font-weight: 600;
@@ -149,7 +152,7 @@
     }
     .title {
       color: white;
-      font-size: 4.2rem;
+      font-size: clamp(1.5rem, 0.7rem + 3vw, 4.2rem);
       line-height: normal;
       font-weight: bold;
     }
@@ -163,9 +166,18 @@
         color: white;
         letter-spacing: 1px;
         transition: background-color 0.3s, color 0.2s;
-
         cursor: pointer;
         font-weight: 600;
+        @media (max-width: 640px) {
+          width: 160px;
+          height: 48px;
+          font-size: 0.85rem;
+        }
+        @media (max-width: 480px) {
+          width: 130px;
+          height: 40px;
+          font-size: 0.75rem;
+        }
         &:hover {
           background-color: white;
           color: black;
@@ -178,6 +190,9 @@
     top: 50%;
     right: 2rem;
     transform: translateY(-50%);
+    @media (max-width: 640px) {
+      display: none;
+    }
     .socialMedia {
       list-style-type: none;
       display: flex;
